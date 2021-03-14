@@ -14,7 +14,19 @@ function App() {
     setLoading(false);
   };
 
-  return <h2>tabs project setup</h2>;
+  useEffect(() => {
+    fetchJobs();
+  }, []);
+
+  if (loading) {
+    return (
+      <section className="section loading">
+        <h1>loading...</h1>
+      </section>
+    );
+  }
+
+  return <h2>jobs</h2>;
 }
 
 export default App;
