@@ -18,6 +18,7 @@ function App() {
     fetchJobs();
   }, []);
 
+  //Load before destructuring
   if (loading) {
     return (
       <section className="section loading">
